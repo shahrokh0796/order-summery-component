@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --color-very-plain-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-birght-blue: hsl(245, 75%, 52%);  
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+    --color-white: #fff;
+    --box-shadow: 0px 10px 33px -17px;
+    --xs: 0.675rem;
+    --sm: 1.3rem;
+    --m: 1.8rem;
+    --l: 2.8rem;
+    --xl: 3.8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+// global css
+img {
+    inline-size: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    min-block-size: 100vh;
+    max-inline-size: 1400px;
+    inline-size: 90%;
+    margin: 0 auto;
+
+    main {
+        background-color: var(--color-pale-blue);
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        picture {
+            position: absolute;
+            z-index: 1;
+            img {
+                inline-size: 100%;
+            }
+        }
+
+        .summery-wall {
+            display: block;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        .container-section {
+            display: grid;
+            grid-template-rows: 1fr;
+            max-inline-size: 23.5rem;
+            margin: var(--m);
+            text-align: center;
+            background-color: var(--color-white);
+            border-radius: var(--sm);
+            z-index: 2;
+        }
+
+        .summery-hero {
+            img {
+                border-top-right-radius: var(--sm);
+                border-top-left-radius: var(--sm);
+            }
+        }
+
+        .summery-details {
+            padding-inline: var(--l);
+            padding-block-start: var(--m);
+            padding-block-end: var(--sm);
+        }
+
+        .summery-description {
+            h1 {
+                font-weight: 900;
+                color: var(--color-dark-blue);
+                font-size: var(--sm);
+                margin-block-end: var(--xs);
+            }
+
+            p {
+                color: var(--color-desaturated-blue);
+                line-height: 1.4;
+                font-size: 0.950rem;
+            }
+        }
+
+        .summery-subscribtion-section {
+            display: grid;
+            grid-template-columns: 1.3fr 2fr 2fr;
+            background-color: var(--color-very-plain-blue);
+            justify-content: center;
+            align-items: center;
+            padding: var(--xs);
+            margin-block: var(--sm);
+            border-radius: var(--xs);
+        }
+
+        .icon {
+            inline-size: var(--l);
+            margin-inline-end: var(--xs);
+        }
+
+        .summery-plan {
+            text-align: start;
+            span:nth-of-type(1) {
+                color: var(--color-dark-blue);
+                font-weight: 900;
+            }
+
+            span:nth-of-type(2) {
+                color: var(--color-desaturated-blue);
+            }
+        }
+
+        .link {
+            text-align: end;
+
+            a:hover {
+                color: var(--color-desaturated-blue);
+                text-decoration: none;
+            }
+        }
+
+        .summery-checkout {
+            display: flex;
+            flex-direction: column;
+            margin-block-end: var(--sm);
+
+            button {
+                padding-block: var(--xs);
+                background-color: var(--color-birght-blue);
+                color: var(--color-white);
+                border-radius: var(--xs);
+                transition: background-color 250ms ease-in-out;
+                cursor:pointer;
+                border: none;
+                margin-block-end: var(--m);
+            }
+
+            button:hover {
+                background-color:hsl(245, 76%, 60%);
+            }
+
+            a {
+                color: var(--color-desaturated-blue);
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+            a:hover {
+                color: var(--color-dark-blue);
+            }
+        }
+    }
+}
